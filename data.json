@@ -1,0 +1,628 @@
+{
+  "site": {
+    "name": "Mohamed Ragab",
+    "nameAr": "محمد رجب",
+    "role": {
+      "en": "Graphic designer, Cairo",
+      "ar": "مصمم جرافيك، القاهرة"
+    },
+    "tagline": {
+      "en": "Brand identities, logos and motion that people remember.",
+      "ar": "هويات بصرية وشعارات وحركة تفضل في الذاكرة."
+    },
+    "yearsClaim": 5
+  },
+  "links": {
+    "behance": "https://www.behance.net/mohamedragab189",
+    "drive": "https://drive.google.com/drive/folders/12N8gAYEX7C2Gj0cclxyLqG-EWiQ81wX5",
+    "reviews": "https://www.facebook.com/share/p/1ZGjPTKgxn/",
+    "instagram": "https://www.instagram.com/zain_arena",
+    "repoEditUrl": ""
+  },
+  "zain": {
+    "title": "ZAIN ARENA",
+    "tag": {
+      "en": "Founder",
+      "ar": "مؤسس"
+    },
+    "text": {
+      "en": "I also founded ZAIN ARENA, a sports app for football and wrestling fans: live scores, goal alerts, predictions, legend cards and a points auction.",
+      "ar": "وأنا كمان مؤسس ZAIN ARENA، تطبيق رياضي لمحبي الكورة والمصارعة: نتائج مباشرة، تنبيهات الأهداف، توقعات، كروت الأساطير ومزاد نقاط."
+    },
+    "image": "",
+    "shots": [
+      {
+        "src": "assets/zain/home.webp",
+        "en": "Home feed",
+        "ar": "الرئيسية"
+      },
+      {
+        "src": "assets/zain/stats.webp",
+        "en": "Match and player stats",
+        "ar": "إحصائيات المباريات واللاعبين"
+      },
+      {
+        "src": "assets/zain/cards.webp",
+        "en": "Legend cards",
+        "ar": "كروت الأساطير"
+      },
+      {
+        "src": "assets/zain/features.webp",
+        "en": "Contests and challenges",
+        "ar": "المسابقات والتحديات"
+      }
+    ],
+    "shotsNote": {
+      "en": "Screens captured from the app. Scores, news and card levels shown are captured examples, not current claims.",
+      "ar": "لقطات من التطبيق. النتايج والأخبار ومستويات الكروت المعروضة أمثلة وقت التصوير، مش معلومات حالية."
+    }
+  },
+  "projects": [
+    {
+      "id": "siraj",
+      "num": "01",
+      "en": "Al-Siraj",
+      "ar": "السراج",
+      "sector": {
+        "en": "Contracting & general supply",
+        "ar": "مقاولات وتوريدات عامة وتشطيبات"
+      },
+      "desc": {
+        "en": "A brand mark built from layered architecture and a bronze finish, made to feel solid, trusted and built to last.",
+        "ar": "علامة مبنية من طبقات معمارية بلمسة برونزية، تعطي إحساس الثبات والثقة والجودة."
+      },
+      "tags": [
+        "Branding",
+        "Logo"
+      ],
+      "accent": "#c89b5a",
+      "bg": "#17120c",
+      "ink": "#f6ecdc",
+      "behance": "https://www.behance.net/gallery/258837573/Al-Siraj",
+      "images": [
+        "assets/images/siraj-1.webp",
+        "assets/images/siraj-2.webp",
+        "assets/images/siraj-3.webp",
+        "assets/images/siraj-4.webp",
+        "assets/images/siraj-5.webp",
+        "assets/images/siraj-6.webp"
+      ]
+    },
+    {
+      "id": "legend",
+      "num": "02",
+      "en": "Al-Ostora",
+      "ar": "الأسطورة",
+      "sector": {
+        "en": "Digital transformation",
+        "ar": "التحول الرقمي"
+      },
+      "desc": {
+        "en": "A hexagon emblem with a circuit-board core in emerald and gold, written to say technology with heritage.",
+        "ar": "شعار سداسي بقلب دوائر إلكترونية بالأخضر والذهبي، يجمع بين التقنية والأصالة."
+      },
+      "tags": [
+        "Branding",
+        "Tech"
+      ],
+      "accent": "#34d27a",
+      "bg": "#07140f",
+      "ink": "#e9fbf1",
+      "behance": "https://www.behance.net/gallery/258837437/The-Legend-IT-Teacher",
+      "images": [
+        "assets/images/legend-1.webp",
+        "assets/images/legend-2.webp",
+        "assets/images/legend-3.webp",
+        "assets/images/legend-4.webp",
+        "assets/images/legend-5.webp",
+        "assets/images/legend-6.webp"
+      ]
+    },
+    {
+      "id": "nine9",
+      "num": "03",
+      "en": "NINE",
+      "ar": "ناين",
+      "sector": {
+        "en": "Industrial & urban development",
+        "ar": "للتنمية الصناعية والعمرانية"
+      },
+      "desc": {
+        "en": "A bold number nine that becomes a skyline, in deep navy with crisp chrome edges.",
+        "ar": "رقم تسعة قوي يتحول إلى أفق مدينة، بالكحلي العميق وحواف معدنية حادة."
+      },
+      "tags": [
+        "Branding",
+        "Logo"
+      ],
+      "accent": "#6f95ff",
+      "bg": "#0a1020",
+      "ink": "#eaf0ff",
+      "behance": "https://www.behance.net/gallery/258834483/NINE-9",
+      "images": [
+        "assets/images/nine9-1.webp",
+        "assets/images/nine9-2.webp",
+        "assets/images/nine9-3.webp",
+        "assets/images/nine9-4.webp",
+        "assets/images/nine9-5.webp",
+        "assets/images/nine9-6.webp"
+      ]
+    },
+    {
+      "id": "hadidy",
+      "num": "04",
+      "en": "Al Hadidy",
+      "ar": "عقارات الحديدي",
+      "sector": {
+        "en": "Real estate",
+        "ar": "عقارات"
+      },
+      "desc": {
+        "en": "A tower with a golden window and a soft orbit line. Clean, premium, easy to place on any sign.",
+        "ar": "برج بنافذة ذهبية وخط مداري ناعم، نظيف وفخم ويصلح لأي لافتة."
+      },
+      "tags": [
+        "Branding",
+        "Real estate"
+      ],
+      "accent": "#d1a64a",
+      "bg": "#101113",
+      "ink": "#f4f1e8",
+      "behance": "https://www.behance.net/gallery/258648643/AL-HADIDY",
+      "images": [
+        "assets/images/hadidy-1.webp",
+        "assets/images/hadidy-2.webp",
+        "assets/images/hadidy-3.webp",
+        "assets/images/hadidy-4.webp",
+        "assets/images/hadidy-5.webp",
+        "assets/images/hadidy-6.webp"
+      ]
+    },
+    {
+      "id": "alittihad",
+      "num": "05",
+      "en": "Al Ittihad",
+      "ar": "الاتحاد",
+      "sector": {
+        "en": "International motors",
+        "ar": "للسيارات الدولية"
+      },
+      "desc": {
+        "en": "Chrome wings rising from a road. Speed, trust and a silver finish on a night-black ground.",
+        "ar": "أجنحة كروم تخرج من طريق، سرعة وثقة وفضي على أرضية سوداء."
+      },
+      "tags": [
+        "Branding",
+        "Automotive"
+      ],
+      "accent": "#d2d8e2",
+      "bg": "#08090c",
+      "ink": "#f2f4f8",
+      "behance": "https://www.behance.net/gallery/258648455/ALITTHAD",
+      "images": [
+        "assets/images/alittihad-1.webp",
+        "assets/images/alittihad-2.webp",
+        "assets/images/alittihad-3.webp",
+        "assets/images/alittihad-4.webp",
+        "assets/images/alittihad-5.webp",
+        "assets/images/alittihad-6.webp"
+      ]
+    },
+    {
+      "id": "israa",
+      "num": "06",
+      "en": "Al-Israa",
+      "ar": "مصنع الإسراء",
+      "sector": {
+        "en": "Mosque rug factory",
+        "ar": "لحصير المساجد"
+      },
+      "desc": {
+        "en": "A shield and an unrolling green carpet, a mark that reads craft and calm at once.",
+        "ar": "درع وسجادة خضراء تنفرد، علامة تجمع الحرفة والسكينة."
+      },
+      "tags": [
+        "Branding",
+        "Packaging"
+      ],
+      "accent": "#52b872",
+      "bg": "#0b1510",
+      "ink": "#eaf5ee",
+      "behance": "https://www.behance.net/gallery/258648229/Al-Israa-Mosque-Rug-Brand",
+      "images": [
+        "assets/images/israa-1.webp",
+        "assets/images/israa-2.webp",
+        "assets/images/israa-3.webp",
+        "assets/images/israa-4.webp",
+        "assets/images/israa-5.webp",
+        "assets/images/israa-6.webp"
+      ]
+    },
+    {
+      "id": "elgehiny",
+      "num": "07",
+      "en": "El-Gehiny Paints",
+      "ar": "حازم الجهيني للدهانات",
+      "sector": {
+        "en": "Paints trade & distribution, since 1980",
+        "ar": "لتجارة وتوزيع الدهانات، منذ 1980"
+      },
+      "desc": {
+        "en": "A gold house-frame badge with a paintbrush in the lettering, on navy. Heritage with a trade tool in it.",
+        "ar": "شارة ذهبية على شكل بيت مع فرشاة داخل الحروف، على خلفية كحلية."
+      },
+      "tags": [
+        "Branding",
+        "Badge"
+      ],
+      "accent": "#e0b457",
+      "bg": "#0b1626",
+      "ink": "#fbf1da",
+      "behance": "https://www.behance.net/gallery/258648101/ELGEHINY-FOR-PAINTS",
+      "images": [
+        "assets/images/elgehiny-1.webp",
+        "assets/images/elgehiny-2.webp",
+        "assets/images/elgehiny-3.webp",
+        "assets/images/elgehiny-4.webp",
+        "assets/images/elgehiny-5.webp",
+        "assets/images/elgehiny-6.webp"
+      ]
+    },
+    {
+      "id": "ofoq",
+      "num": "08",
+      "en": "OFOQ",
+      "ar": "أفق",
+      "sector": {
+        "en": "Skyline identity",
+        "ar": "هوية أفق المدينة"
+      },
+      "desc": {
+        "en": "Geometric towers in champagne gold, an Arabic wordmark with room to breathe.",
+        "ar": "أبراج هندسية بالذهبي الشامبانيا، وكتابة عربية بمساحة واسعة."
+      },
+      "tags": [
+        "Branding",
+        "Logo"
+      ],
+      "accent": "#cdb083",
+      "bg": "#100f0d",
+      "ink": "#f5eee1",
+      "behance": "https://www.behance.net/gallery/258647959/OFOQ",
+      "images": [
+        "assets/images/ofoq-1.webp",
+        "assets/images/ofoq-2.webp",
+        "assets/images/ofoq-3.webp",
+        "assets/images/ofoq-4.webp",
+        "assets/images/ofoq-5.webp",
+        "assets/images/ofoq-6.webp"
+      ]
+    },
+    {
+      "id": "rasmy",
+      "num": "09",
+      "en": "Rasmy Group",
+      "ar": "رسمي جروب",
+      "sector": {
+        "en": "Electrical industries & modern technology",
+        "ar": "للصناعات الكهربائية والتكنولوجيا الحديثة"
+      },
+      "desc": {
+        "en": "RS monogram wrapped in a gold orbit with a lightning bolt. Industrial and energetic.",
+        "ar": "مونوجرام RS داخل مدار ذهبي مع برق، صناعي ومليان طاقة."
+      },
+      "tags": [
+        "Branding",
+        "Industrial"
+      ],
+      "accent": "#f0b400",
+      "bg": "#0d0c08",
+      "ink": "#fff7dc",
+      "behance": "https://www.behance.net/gallery/258647841/RASMY-GROUP",
+      "images": [
+        "assets/images/rasmy-1.webp",
+        "assets/images/rasmy-2.webp",
+        "assets/images/rasmy-3.webp",
+        "assets/images/rasmy-4.webp",
+        "assets/images/rasmy-5.webp",
+        "assets/images/rasmy-6.webp"
+      ]
+    },
+    {
+      "id": "abosanad",
+      "num": "10",
+      "en": "Abo Sanad",
+      "ar": "أبو سند",
+      "sector": {
+        "en": "Iron, hardware & trade",
+        "ar": "للحدايد والتجارة"
+      },
+      "desc": {
+        "en": "A crowned wrench badge in red chrome. Loud, friendly and made for a shop sign.",
+        "ar": "شارة بمفاتيح وتاج بالأحمر الكروم، قوية وودودة ومناسبة للافتة المحل."
+      },
+      "tags": [
+        "Branding",
+        "Badge"
+      ],
+      "accent": "#ff4146",
+      "bg": "#161012",
+      "ink": "#fff0ef",
+      "behance": "https://www.behance.net/gallery/258647075/Abo-Sanad",
+      "images": [
+        "assets/images/abosanad-1.webp",
+        "assets/images/abosanad-2.webp",
+        "assets/images/abosanad-3.webp",
+        "assets/images/abosanad-4.webp",
+        "assets/images/abosanad-5.webp",
+        "assets/images/abosanad-6.webp"
+      ]
+    },
+    {
+      "id": "mazaya",
+      "num": "11",
+      "en": "Mazaya",
+      "ar": "مزايا",
+      "sector": {
+        "en": "Import & export",
+        "ar": "للاستيراد والتصدير"
+      },
+      "desc": {
+        "en": "Two interlocked letters, M and Z, in brushed platinum and gold on dark stone.",
+        "ar": "حرفان M وZ متداخلان بالبلاتيني والذهبي على حجر داكن."
+      },
+      "tags": [
+        "Branding",
+        "Monogram"
+      ],
+      "accent": "#c9bfa4",
+      "bg": "#0e1011",
+      "ink": "#f2efe6",
+      "behance": "https://www.behance.net/gallery/258459329/MAZAYA",
+      "images": [
+        "assets/images/mazaya-1.webp",
+        "assets/images/mazaya-2.webp",
+        "assets/images/mazaya-3.webp",
+        "assets/images/mazaya-4.webp",
+        "assets/images/mazaya-5.webp",
+        "assets/images/mazaya-6.webp"
+      ]
+    },
+    {
+      "id": "tayba",
+      "num": "12",
+      "en": "Tayba Group",
+      "ar": "مجموعة طيبة",
+      "sector": {
+        "en": "Price list system",
+        "ar": "منظومة قوائم الأسعار"
+      },
+      "desc": {
+        "en": "A set of price-list sheets that stay readable at a glance, with green and red status cues.",
+        "ar": "مجموعة قوائم أسعار واضحة من أول نظرة، مع ألوان أخضر وأحمر للحالة."
+      },
+      "tags": [
+        "Graphic design",
+        "Layout"
+      ],
+      "accent": "#3ccf77",
+      "bg": "#0c1118",
+      "ink": "#e8f0f6",
+      "behance": "https://www.behance.net/gallery/257972465/Price-List-Tayba-Group",
+      "images": [
+        "assets/images/tayba-1.webp",
+        "assets/images/tayba-2.webp",
+        "assets/images/tayba-3.webp",
+        "assets/images/tayba-4.webp",
+        "assets/images/tayba-5.webp",
+        "assets/images/tayba-6.webp"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "id": "1rT8oYgrX4kDhQRJd_GpBNdAmvv6hm25M",
+      "title": "Sample 01",
+      "thumb": "assets/videos/v01.jpg"
+    },
+    {
+      "id": "1W0zBXYs_yo3vGsdwHPpDfrn1qbd0uSSX",
+      "title": "Sample 02",
+      "thumb": "assets/videos/v02.jpg"
+    },
+    {
+      "id": "17IC7uJh1d-y426bWlKUVaAkSUajS6AXo",
+      "title": "Sample 03",
+      "thumb": "assets/videos/v03.jpg"
+    },
+    {
+      "id": "1EmBBiIgBpAJY-vavpHM3-A2akg43PFkD",
+      "title": "Sample 04",
+      "thumb": "assets/videos/v04.jpg"
+    },
+    {
+      "id": "1qdap3StizTDgUOawXVn1toie_UOCM2Xi",
+      "title": "Sample 05",
+      "thumb": "assets/videos/v05.jpg"
+    },
+    {
+      "id": "1s-gQYT03S72lwklJXYjwYtg2rKztWfkS",
+      "title": "Sample 06",
+      "thumb": "assets/videos/v06.jpg"
+    },
+    {
+      "id": "1GBws5MzRSR7KPTLtF6LaRTQTrR3d8UAm",
+      "title": "Sample 07",
+      "thumb": "assets/videos/v07.jpg"
+    },
+    {
+      "id": "14ewLKMnkmKHAySeFc2riWnKbAyEVxFkB",
+      "title": "Sample 08",
+      "thumb": "assets/videos/v08.jpg"
+    },
+    {
+      "id": "1APtZpUt-pNuBNCpXJ6nK2S47e0tWwsUH",
+      "title": "Sample 09",
+      "thumb": "assets/videos/v09.jpg"
+    },
+    {
+      "id": "1_wlOQ-9Uqtr_ri_Se2RpMtXd2Bnsh64I",
+      "title": "Sample 10",
+      "thumb": "assets/videos/v10.jpg"
+    },
+    {
+      "id": "1b0sLzcOHZYbZYUYKDUbmNqVUI1hOKKab",
+      "title": "Sample 11",
+      "thumb": "assets/videos/v11.jpg"
+    },
+    {
+      "id": "1bCxGsmneU_X0E9-dzSRA1iF6aeziWqq6",
+      "title": "Sample 12",
+      "thumb": "assets/videos/v12.jpg"
+    },
+    {
+      "id": "1ETpQCgEeJhiwMWZoNxdzyW1F5-sg9u3k",
+      "title": "Sample 13",
+      "thumb": "assets/videos/v13.jpg"
+    },
+    {
+      "id": "1ZVLVVwLPspoPqtIurKBvR0QIJE_l_kyb",
+      "title": "Sample 14",
+      "thumb": "assets/videos/v14.jpg"
+    },
+    {
+      "id": "1ANdENHPuTtbxDx7QmTH8XVbiZTYH1jGH",
+      "title": "Sample 15",
+      "thumb": "assets/videos/v15.jpg"
+    },
+    {
+      "id": "1fXbEgBKhBCbdak8-i37qPEYWpgxTQ-U8",
+      "title": "Sample 16",
+      "thumb": "assets/videos/v16.jpg"
+    },
+    {
+      "id": "1ycMsbvpQiZb5K7GfPuaQpPnNtd-jwmlQ",
+      "title": "Sample 17",
+      "thumb": "assets/videos/v17.jpg"
+    },
+    {
+      "id": "15tX_B2YpzXHFGFbSmWlqBUnduLRIgN4s",
+      "title": "Sample 18",
+      "thumb": "assets/videos/v18.jpg"
+    },
+    {
+      "id": "1Phca1gBWLPMk8CdNw0PNGvJdpf95vvci",
+      "title": "Sample 19",
+      "thumb": "assets/videos/v19.jpg"
+    },
+    {
+      "id": "111sTtbKmklaJA68bNyv4VYBUrElMD_cm",
+      "title": "Sample 20",
+      "thumb": "",
+      "hidden": true
+    },
+    {
+      "id": "1iarFv6AusuIdRW-yi90ydD1ZMKudfcg1",
+      "title": "Sample 21",
+      "thumb": "assets/videos/v21.jpg"
+    },
+    {
+      "id": "1pt-g6AP49QOMt5QGwKl3Q6FrAwxT5RZr",
+      "title": "Sample 22",
+      "thumb": "assets/videos/v22.jpg"
+    },
+    {
+      "id": "1dmjoGtneY_xaqUC1XM-Jpi2xwu4eMR0y",
+      "title": "Sample 23",
+      "thumb": "assets/videos/v23.jpg"
+    },
+    {
+      "id": "16bzpT1CzigtkFLPEM4E-uYT2fDFqZHK6",
+      "title": "Sample 24",
+      "thumb": "assets/videos/v24.jpg"
+    },
+    {
+      "id": "1wieHGe6c1e7ArCsK8Jd-p7_oeUMmK5pS",
+      "title": "Sample 25",
+      "thumb": "assets/videos/v25.jpg"
+    },
+    {
+      "id": "1Wr8fr9LqXt_mCQDyc3JE6-qBytfnPlZs",
+      "title": "Sample 26",
+      "thumb": "assets/videos/v26.jpg"
+    },
+    {
+      "id": "1Ny22g4Xs8DkIp3-O-XywdNdSCOAWFWQf",
+      "title": "Sample 27",
+      "thumb": "assets/videos/v27.jpg"
+    },
+    {
+      "id": "1l7NfQReeOk9PN1FKTaYfn6XQL2qTx-YJ",
+      "title": "Sample 28",
+      "thumb": "assets/videos/v28.jpg"
+    },
+    {
+      "id": "1tl3ggi643Rk_M45JSY-xXbh9wU7GwlCJ",
+      "title": "Sample 29",
+      "thumb": "assets/videos/v29.jpg"
+    },
+    {
+      "id": "1FTTzjiZQid-Nyosq19UNgG8h7xQqcXGH",
+      "title": "Sample 30",
+      "thumb": "assets/videos/v30.jpg"
+    },
+    {
+      "id": "1yW2POHTxrYz8TZWP8H55w2SE59nUFRgw",
+      "title": "Sample 31",
+      "thumb": "assets/videos/v31.jpg"
+    },
+    {
+      "id": "1bdRm-vpQw_25Lpe5IK0tWbByFCL5QHvJ",
+      "title": "Sample 32",
+      "thumb": "assets/videos/v32.jpg"
+    },
+    {
+      "id": "1BzdUPHCFieHeskaa9AU6e7t2Ue6Ysbly",
+      "title": "Sample 33",
+      "thumb": "assets/videos/v33.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "توابل وعطاره الاسواني",
+      "text": "بجد شغل ممتاز جداً تسلم ايدك يا هندسة بجد احسن شغل و احسن تصميمات"
+    },
+    {
+      "name": "Mohamed Saad",
+      "text": "والله كل الشكر ليك على المصدقية والامان والثقة وسرعة الشغل ومش اخر تعامل مع بعض ان شاءالله"
+    },
+    {
+      "name": "سيد عبد الرحيم",
+      "text": "كل الشكر على تعبك معايا انا كنت عميل بدقق في كل التفاصيل واختياراتي كان لازمها حد خبرة زيك اشكرك على المصداقية والمجهود والزوق العالي"
+    },
+    {
+      "name": "Mohamed Al Hawary",
+      "text": "شكرا استاذ محمد انسان محترم جدا وشغلك ممتاذ ماشاء الله من الناس المحترمه الي تحب تتعامل معاها"
+    },
+    {
+      "name": "احمد رجب",
+      "text": "الف شكر وتسلم ايدك على الشغل والمحتوى وتصميماتك يا استاذ محمد"
+    },
+    {
+      "name": "سليمان عبدالله سليمان",
+      "text": "جزاك الله خيرا. احسنت المعاملة.. امانة وصدق ووفاء وجودة كل التحية والتقدير والاحترام لحضرتك"
+    },
+    {
+      "name": "Abdo Gamal",
+      "text": "حد محترم و شاطر و شغله مميز بتوفيق"
+    },
+    {
+      "name": "Al Tamayuz Academy Online",
+      "text": "كل الشكر والاحترام والتقدير أستاذ محمد بجد والله شكراً جزيلا"
+    },
+    {
+      "name": "Ahmed Fekry",
+      "text": "كل الشكر والتقدير والاحترام للاستاذ محمد ، انسان محترم وصادق فكلامه ، مخلص فعمله"
+    }
+  ]
+}
