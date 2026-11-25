@@ -1,3 +1,5 @@
+/* intro video */
+(function () { var a = document.getElementById('app'); if (!a) return; function add() { var w = document.getElementById('work'); if (!w || document.getElementById('intro')) return; var ar = (localStorage.getItem('mr-lang') || 'en') === 'ar'; var s = document.createElement('section'); s.id = 'intro'; s.setAttribute('style', 'max-width:1100px;margin:0 auto;padding:70px 20px 20px'); s.innerHTML = '<h2 style="margin:0 0 20px">' + (ar ? '\u062a\u0639\u0631\u0651\u0641 \u0639\u0644\u064a\u0651' : 'Meet me') + '</h2><video controls playsinline preload="metadata" src="assets/3-intro.mp4#t=0.1" style="width:100%;border-radius:16px;background:#000;display:block"></video>'; w.parentNode.insertBefore(s, w); } new MutationObserver(add).observe(a, { childList: true }); add(); })();
 (function () {
   'use strict';
   var T = {
