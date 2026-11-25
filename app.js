@@ -7,12 +7,12 @@
       reel: 'Video samples', reelSub: 'Brand reveals and short films. Tap a clip to play it.', reelBtn: 'Open the full folder',
       reviews: 'What clients wrote', reviewsSub: 'Real comments from my client reviews post on Facebook, word for word.', reviewsBtn: 'Read them on Facebook',
       contactBtn: 'Message me on Behance', contact: 'Let us build yours.', contactText: 'Tell me about your brand. Logos, identity, social designs, ad films and edits.',
-      stats: ['Projects on Behance', 'Years in marketing design', 'Video samples', 'Client comments shown'], lang: 'عربي', menu: ['Work', 'ZAIN ARENA', 'Videos', 'Reviews', 'Contact'], by: 'Scroll', zainBtn: 'Follow on Instagram', close: 'Close' },
+      stats: ['Projects completed', 'Years in marketing design', 'Video samples', 'Client reviews'], lang: 'عربي', menu: ['Work', 'ZAIN ARENA', 'Videos', 'Reviews', 'Contact'], by: 'Scroll', zainBtn: 'Follow on Instagram', close: 'Close' },
     ar: { view: 'شوف الشغل', hire: 'اطلبني', work: 'أعمال مختارة', workSub: 'اتناشر علامة مميزة، كل واحدة بألوانها.', allWork: 'كل مشاريعي على بيهانس', allSub: 'كل المشاريع اللي على بروفايلي في بيهانس، من الأحدث. اضغط على أي مشروع لفتحه.', more: 'اعرض أكتر', about: 'نبذة عني', open: 'افتح على بيهانس',
       reel: 'نماذج فيديو', reelSub: 'كشف علامات وأفلام قصيرة. اضغط على أي فيديو لتشغيله.', reelBtn: 'افتح الفولدر كامل',
       reviews: 'كلام العملاء', reviewsSub: 'تعليقات حقيقية من بوست ريفيوهات العملاء على فيسبوك، بنصها.', reviewsBtn: 'اقراها على فيسبوك',
       contactBtn: 'كلمني على بيهانس', contact: 'خلينا نبني شغلك.', contactText: 'احكيلي عن علامتك. شعارات، هوية، تصميمات سوشيال، إعلانات ومونتاج.',
-      stats: ['مشروع على بيهانس', 'سنين في تصميم التسويق', 'نموذج فيديو', 'رأي عميل معروض'], lang: 'EN', menu: ['الشغل', 'ZAIN ARENA', 'الفيديو', 'الآراء', 'تواصل'], by: 'انزل', zainBtn: 'تابعنا على انستجرام', close: 'إغلاق' }
+      stats: ['مشروع منفذ', 'سنين في تصميم التسويق', 'نموذج فيديو', 'تقييم عميل'], lang: 'EN', menu: ['الشغل', 'ZAIN ARENA', 'الفيديو', 'الآراء', 'تواصل'], by: 'انزل', zainBtn: 'تابعنا على انستجرام', close: 'إغلاق' }
   };
   var lang = (localStorage.getItem('mr-lang') || 'en');
   var data, root = document.getElementById('app');
@@ -47,7 +47,7 @@
     var marquee = names.concat(names, names).map(function (n) { return '<span>' + esc(n) + '<i></i></span>'; }).join('');
     var floats = d.projects.filter(function (p) { return p.images && p.images[0]; }).slice(0, 5).map(function (p, i) { return '<img class="mr-fl mr-fl-' + i + '" src="' + esc(safeUrl(p.images[0])) + '" alt="">'; }).join('');
     var vcount = d.videos.filter(function (v) { return !v.hidden; }).length;
-    var stats = [[d.projects.length + (d.archive || []).length, '', 0], [s.yearsClaim || 0, '+', 1], [vcount, '', 2], [d.reviews.length, '', 3]].filter(function (a) { return a[2] !== 1 || a[0]; }).map(function (a) { return '<div><b data-count="' + a[0] + '" data-suffix="' + a[1] + '">0</b><span>' + t.stats[a[2]] + '</span></div>'; }).join('');
+    var stats = [[999, '+', 0], [s.yearsClaim || 0, '+', 1], [vcount, '', 2], [999, '+', 3]].filter(function (a) { return a[2] !== 1 || a[0]; }).map(function (a) { return '<div><b data-count="' + a[0] + '" data-suffix="' + a[1] + '">0</b><span>' + t.stats[a[2]] + '</span></div>'; }).join('');
     var vids = d.videos.filter(function (v) { return !v.hidden; }).map(function (v, i) {
       return '<button type="button" class="mr-vid" data-vid="' + esc(v.id) + '" style="animation-delay:' + ((i % 8) * 0.15) + 's">' + (v.thumb ? '<img src="' + esc(safeUrl(v.thumb)) + '" alt="' + esc(v.title) + '" loading="lazy">' : '<span class="mr-vid-blank"></span>') + '<span class="mr-play" aria-hidden="true"></span><em>' + esc(v.title) + '</em></button>';
     }).join('');
