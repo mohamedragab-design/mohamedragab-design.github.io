@@ -12,6 +12,19 @@
       contactBtn: 'كلمني على بيهانس', contact: 'خلينا نبني شغلك.', contactText: 'احكيلي عن علامتك. شعارات، هوية، تصميمات سوشيال، إعلانات ومونتاج.',
       stats: ['مشروع على بيهانس', 'سنين في تصميم التسويق', 'نموذج فيديو'], lang: 'EN', menu: ['الشغل', 'ZAIN ARENA', 'الفيديو', 'الآراء', 'تواصل'], by: 'انزل', zainBtn: 'تابعنا على انستجرام', close: 'إغلاق' }
   };
+  'use strict';
+  var T = {
+    en: { view: 'See the work', hire: 'Hire me', work: 'Selected work', workSub: 'Twelve brands, each in its own colors.', open: 'Open on Behance',
+      reel: 'Video samples', reelSub: 'Brand reveals and short films. Tap a clip to play it.', reelBtn: 'Open the full folder',
+      reviews: 'What clients wrote', reviewsSub: 'Comments under my reviews post on Facebook.', reviewsBtn: 'Read them on Facebook',
+      contactBtn: 'Message me on Behance', contact: 'Let us build yours.', contactText: 'Tell me about your brand. Logos, identity, social designs, ad films and edits.',
+      stats: ['Projects on Behance', 'Years in marketing design', 'Video samples'], lang: 'عربي', menu: ['Work', 'ZAIN ARENA', 'Videos', 'Reviews', 'Contact'], by: 'Scroll', zainBtn: 'Follow on Instagram', close: 'Close' },
+    ar: { view: 'شوف الشغل', hire: 'اطلبني', work: 'أعمال مختارة', workSub: 'اتناشر علامة، كل واحدة بألوانها.', open: 'افتح على بيهانس',
+      reel: 'نماذج فيديو', reelSub: 'كشف علامات وأفلام قصيرة. اضغط على أي فيديو لتشغيله.', reelBtn: 'افتح الفولدر كامل',
+      reviews: 'كلام العملاء', reviewsSub: 'تعليقات تحت بوست الريفيوهات على فيسبوك.', reviewsBtn: 'اقراها على فيسبوك',
+      contactBtn: 'كلمني على بيهانس', contact: 'خلينا نبني شغلك.', contactText: 'احكيلي عن علامتك. شعارات، هوية، تصميمات سوشيال، إعلانات ومونتاج.',
+      stats: ['مشروع على بيهانس', 'سنين في تصميم التسويق', 'نموذج فيديو'], lang: 'EN', menu: ['الشغل', 'ZAIN ARENA', 'الفيديو', 'الآراء', 'تواصل'], by: 'انزل', zainBtn: 'تابعنا على انستجرام', close: 'إغلاق' }
+  };
   var lang = (localStorage.getItem('mr-lang') || 'en');
   var data, root = document.getElementById('app');
 
@@ -61,7 +74,7 @@
       ['#work', '#zain', '#reel', '#reviews', '#contact'].map(function (h, i) { return '<a href="' + h + '">' + t.menu[i] + '</a>'; }).join('') + '</nav><button type="button" class="mr-lang" id="mr-lang">' + t.lang + '</button></header>' +
       '<section class="mr-hero" id="top" data-accent="#d6b25e" data-bg="#07080b" data-ink="#f4efe6"><div class="mr-orb mr-orb-a"></div><div class="mr-orb mr-orb-b"></div>' +
       '<div class="mr-hero-copy"><p class="mr-kicker">' + esc(L(s.role)) + '</p><h1><span class="mr-line">' + letters('Mohamed') + '</span><span class="mr-line">' + letters('Ragab') + '</span></h1><p class="mr-ar-hero" dir="rtl">' + esc(s.nameAr) + '</p><p class="mr-hello">' + esc(L(s.tagline)) + '</p>' +
-      '<div class="mr-cta"><a class="mr-btn" href="#work">' + t.view + '</a><a class="mr-btn mr-btn-ghost" href="#contact">' + t.hire + '</a></div></div>' +
+      '<div class="mr-cta"><a class="mr-btn" href="#work">' + t.view + '</a><a class="mr-btn mr-btn-ghost" href="https://wa.me/201154871814" target="_blank" rel="noopener">' + t.hire + '</a></div></div>' +
       '<div class="mr-float" aria-hidden="true">' + floats + '</div><div class="mr-scroll"><span></span>' + t.by + '</div></section>' +
       '<div class="mr-marquee" aria-hidden="true"><div>' + marquee + '</div></div>' +
       '<section class="mr-stats" data-rv>' + stats + '</section>' +
