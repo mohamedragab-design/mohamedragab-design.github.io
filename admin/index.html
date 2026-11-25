@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Portfolio editor</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;background:#0b0c10;color:#eee}
+header{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 16px;background:#12141b;border-bottom:1px solid #262a36}
+h1{font-size:17px;margin:0 auto 0 0}button,a.b{font:inherit;color:#111;background:#d6b25e;border:0;border-radius:10px;padding:9px 14px;cursor:pointer;text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
+button.g,a.g{background:#262a36;color:#eee}nav{display:flex;gap:6px;padding:10px 16px;flex-wrap:wrap}nav button{background:#1a1d27;color:#ddd}nav button.on{background:#d6b25e;color:#111}
+main{padding:8px 16px 80px;max-width:960px;margin:auto}.card{background:#14161e;border:1px solid #262a36;border-radius:16px;padding:14px;margin:12px 0}
+label{display:block;font-size:12px;color:#9aa;margin:10px 0 4px}input,textarea,select{width:100%;background:#0b0c10;color:#eee;border:1px solid #333948;border-radius:10px;padding:9px;font:inherit}input[type=color]{padding:2px;height:40px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.sw{display:flex;gap:10px;flex-wrap:wrap}.sw>div{flex:1;min-width:90px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.note{background:#1d2230;border-left:3px solid #d6b25e;padding:10px 12px;border-radius:8px;font-size:13px;margin:12px 0}
+.th{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.th img{width:56px;height:56px;object-fit:cover;border-radius:8px;border:1px solid #333}
+h3{margin:0 0 4px}small{color:#8a93a6}#msg{position:fixed;bottom:12px;left:12px;right:12px;background:#222a;padding:10px 14px;border-radius:12px;display:none;backdrop-filter:blur(8px)}
+</style>
+</head>
+<body>
+<header><h1>Portfolio editor</h1><button type="button" id="prev">Preview</button><button type="button" id="copy" class="g">Copy data.json</button><button type="button" id="dl" class="g">Download data.json</button><a class="b g" id="gh" target="_blank" rel="noopener">Publish on GitHub</a></header>
+<nav id="tabs"></nav>
+<main>
+<div class="note">Changes here stay in this browser as a draft. Use <b>Preview</b> to see them on the site. To make them live: <b>Copy data.json</b>, press <b>Publish on GitHub</b>, paste over the old text and press Commit. The site updates by itself in about a minute. No password or token is ever typed on this page.</div>
+<div id="view"></div>
+</main>
+<div id="msg"></div>
+<script>
+(function(){'use strict';
+var KEY='mr-draft-data',data,tab='projects',view=document.getElementById('view');
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function say(t){var m=$('msg');m.textContent=t;m.style.display='block';clearTimeout(say.t);say.t=setTimeout(function(){m.style.display='none'},3500)}
+function save(){localStorage.setItem(KEY,JSON.stringify(data))}
+function tabs(){var T=[['projects','Projects'],['videos','Videos'],['reviews','Reviews'],['site','Site & links'],['zain','ZAIN ARENA']];$('tabs').innerHTML=T.map(function(t){return '<button type="button" class="'+(tab===t[0]?'on':'')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join('');$('tabs').querySelectorAll('button').forEach(function(b){b.onclick=function(){tab=b.dataset.t;draw()}})}
+function f(label,path,val,type){return '<div><label>'+label+'</label><input data-p="'+path+'" type="'+(type||'text')+'" value="'+esc(val)+'"></div>'}
+function ta(label,path,val,rows){return '<div><label>'+label+'</label><textarea rows="'+(rows||3)+'" data-p="'+path+'">'+esc(val)+'</textarea></div>'}
+function setp(path,v){var a=path.split('.'),o=data;for(var i=0;i<a.length-1;i++)o=o[a[i]];var k=a[a.length-1];o[k]=(k==='tags')?v.split(',').map(function(x){return x.trim()}).filter(Boolean):(k==='images')?v.split('\n').map(function(x){return x.trim()}).filter(Boolean):(k==='yearsClaim')?(+v||0):v;save()}
+function draw(){tabs();var h='';
+if(tab==='projects'){data.projects.forEach(function(p,i){var P='projects.'+i+'.';
+h+='<div class="card"><h3>'+esc(p.en||'New project')+' <small>#'+(i+1)+'</small></h3><div class="row">'+f('Name (English)',P+'en',p.en)+f('Name (Arabic)',P+'ar',p.ar)+f('Short id (no spaces, used for the link)',P+'id',p.id)+f('Number label',P+'num',p.num)+'</div>'+
+'<div class="row">'+f('Field (English)',P+'sector.en',p.sector.en)+f('Field (Arabic)',P+'sector.ar',p.sector.ar)+f('Tags (comma separated)',P+'tags',(p.tags||[]).join(', '))+f('Behance link',P+'behance',p.behance)+'</div>'+
+ta('Description (English)',P+'desc.en',p.desc.en)+ta('Description (Arabic)',P+'desc.ar',p.desc.ar)+
+'<div class="sw"><div><label>Accent color</label><input type="color" data-p="'+P+'accent" value="'+esc(p.accent)+'"></div><div><label>Background</label><input type="color" data-p="'+P+'bg" value="'+esc(p.bg)+'"></div><div><label>Text color</label><input type="color" data-p="'+P+'ink" value="'+esc(p.ink)+'"></div></div>'+
+ta('Images (one path per line, first one is the big image)',P+'images',(p.images||[]).join('\n'),5)+
+'<div class="bar"><button type="button" class="g" data-img="'+i+'">Add image from my device</button><button type="button" class="g" data-up="'+i+'">Move up</button><button type="button" class="g" data-del="'+i+'">Delete project</button></div></div>'});
+h+='<div class="bar"><button type="button" id="addp">Add a project</button></div><input type="file" id="file" accept="image/*" hidden>'}
+if(tab==='videos'){h+='<div class="note">Open the video in Google Drive, press Share, set "Anyone with the link", then copy the ID from the link (the long text between /d/ and /view). Thumbnails: add a picture file to assets/videos on GitHub and write its path, or leave it blank.</div>';data.videos.forEach(function(v,i){var P='videos.'+i+'.';h+='<div class="card"><div class="row">'+f('Title',P+'title',v.title)+f('Google Drive file ID',P+'id',v.id)+f('Thumbnail path',P+'thumb',v.thumb)+'</div><div class="bar"><button type="button" class="g" data-vdel="'+i+'">Delete</button></div></div>'});h+='<div class="bar"><button type="button" id="addv">Add a video</button></div>'}
+if(tab==='reviews'){data.reviews.forEach(function(r,i){var P='reviews.'+i+'.';h+='<div class="card">'+f('Name',P+'name',r.name)+ta('Comment (exact words)',P+'text',r.text)+'<div class="bar"><button type="button" class="g" data-rdel="'+i+'">Delete</button></div></div>'});h+='<div class="bar"><button type="button" id="addr">Add a review</button></div>'}
+if(tab==='site'){h+='<div class="card"><div class="row">'+f('Name','site.name',data.site.name)+f('Name (Arabic)','site.nameAr',data.site.nameAr)+f('Role (English)','site.role.en',data.site.role.en)+f('Role (Arabic)','site.role.ar',data.site.role.ar)+f('Years of experience (number)','site.yearsClaim',data.site.yearsClaim,'number')+'</div>'+ta('Tagline (English)','site.tagline.en',data.site.tagline.en)+ta('Tagline (Arabic)','site.tagline.ar',data.site.tagline.ar)+'</div><div class="card"><div class="row">'+f('Behance','links.behance',data.links.behance)+f('Video folder (Drive)','links.drive',data.links.drive)+f('Reviews post','links.reviews',data.links.reviews)+f('Instagram','links.instagram',data.links.instagram)+f('GitHub edit link for data.json (set once)','links.repoEditUrl',data.links.repoEditUrl)+'</div></div>'}
+if(tab==='zain'){h+='<div class="card"><div class="row">'+f('Title','zain.title',data.zain.title)+f('Image path (a real app screenshot, optional)','zain.image',data.zain.image)+'</div>'+ta('Text (English)','zain.text.en',data.zain.text.en)+ta('Text (Arabic)','zain.text.ar',data.zain.text.ar)+'</div><div class="note">App screenshots. Upload the picture into assets/zain on GitHub, then add it here with its path.</div>'+(data.zain.shots||[]).map(function(h,i){var P='zain.shots.'+i+'.';return '<div class="card"><div class="row">'+f('Image path',P+'src',h.src)+f('Caption (English)',P+'en',h.en)+f('Caption (Arabic)',P+'ar',h.ar)+'</div><div class="bar"><button type="button" class="g" data-sdel="'+i+'">Delete</button></div></div>'}).join('')+'<div class="bar"><button type="button" id="adds">Add a screenshot</button></div>'+'<div class="card">'+ta('Screenshots note (English)','zain.shotsNote.en',(data.zain.shotsNote||{}).en)+ta('Screenshots note (Arabic)','zain.shotsNote.ar',(data.zain.shotsNote||{}).ar)+'</div>'}
+view.innerHTML=h;
+view.querySelectorAll('[data-p]').forEach(function(el){el.oninput=function(){setp(el.dataset.p,el.value)}});
+var q=function(s,fn){view.querySelectorAll(s).forEach(fn)};
+q('[data-del]',function(b){b.onclick=function(){if(b.dataset.sure){data.projects.splice(+b.dataset.del,1);save();draw()}else{b.dataset.sure=1;b.textContent='Press again to delete'}}});
+q('[data-up]',function(b){b.onclick=function(){var i=+b.dataset.up;if(i>0){var t=data.projects[i];data.projects[i]=data.projects[i-1];data.projects[i-1]=t;save();draw()}}});
+q('[data-vdel]',function(b){b.onclick=function(){data.videos.splice(+b.dataset.vdel,1);save();draw()}});
+q('[data-rdel]',function(b){b.onclick=function(){data.reviews.splice(+b.dataset.rdel,1);save();draw()}});
+var a=$('addp');if(a)a.onclick=function(){var n=data.projects.length+1;data.projects.push({id:'project'+n,num:('0'+n).slice(-2),en:'New project',ar:'',sector:{en:'',ar:''},desc:{en:'',ar:''},tags:['Branding'],accent:'#d6b25e',bg:'#101010',ink:'#f4efe6',behance:'',images:[]});save();draw();scrollTo(0,document.body.scrollHeight)};
+a=$('adds');if(a)a.onclick=function(){data.zain.shots=(data.zain.shots||[]).concat({src:'',en:'',ar:''});save();draw()};q('[data-sdel]',function(b){b.onclick=function(){data.zain.shots.splice(+b.dataset.sdel,1);save();draw()}});a=$('addv');if(a)a.onclick=function(){data.videos.push({id:'',title:'New video',thumb:''});save();draw()};
+a=$('addr');if(a)a.onclick=function(){data.reviews.push({name:'',text:''});save();draw()};
+var file=$('file');q('[data-img]',function(b){b.onclick=function(){file.dataset.i=b.dataset.img;file.click()}});
+if(file)file.onchange=function(){var fl=file.files[0];if(!fl)return;var i=+file.dataset.i,p=data.projects[i],im=new Image();im.onload=function(){var s=Math.min(1,1000/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);c.getContext('2d').drawImage(im,0,0,c.width,c.height);c.toBlob(function(bl){var n=(p.images||[]).length+1,name=p.id+'-'+n+'.webp',a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download=name;a.click();p.images=(p.images||[]).concat('assets/images/'+name);save();draw();say('Saved '+name+'. Upload this file into assets/images on GitHub.')},'image/webp',.82)};im.src=URL.createObjectURL(fl);file.value=''};
+}
+function json(){return JSON.stringify(data,null,2)}
+$('prev').onclick=function(){localStorage.setItem('mr-preview-data',json());window.open('../index.html?preview=1','_blank')};
+$('copy').onclick=function(){var t=json();(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){say('Copied. Now press Publish on GitHub and paste.')},function(){var x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove();say('Copied.')})};
+$('dl').onclick=function(){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([json()],{type:'application/json'}));a.download='data.json';a.click()};
+function init(j){var d=null;try{d=JSON.parse(localStorage.getItem(KEY))}catch(e){}data=d||j;var g=$('gh');var u=data.links&&data.links.repoEditUrl;if(u&&/^https:\/\/github\.com\//.test(u)){g.href=u}else{g.removeAttribute('href');g.onclick=function(e){e.preventDefault();say('Set the GitHub edit link under Site & links first.')}}draw()}
+fetch('../data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(init).catch(function(){say('Could not load data.json')});
+})();
+</script>
+</body>
+</html>
