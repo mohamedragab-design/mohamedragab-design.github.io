@@ -9,7 +9,7 @@ body { background: #07080b; margin: 0; }
 .mr-nav nav { display: none; gap: 22px; font-size: 14px; opacity: .8; }
 .mr-nav nav a:hover { color: var(--accent); }
 .mr-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .02em; }
-.mr-logo { width: 36px; height: 36px; }
+.mr-logo { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 70%, transparent), 0 6px 20px -6px var(--accent); transition: box-shadow .6s, transform .4s; } .mr-brand:hover .mr-logo { transform: rotate(-8deg) scale(1.08); }
 .mr-logo-ring, .mr-logo-m, .mr-logo-r { stroke-dasharray: 100; stroke-dashoffset: 100; animation: mr-draw 1.6s .2s ease forwards; }
 .mr-logo-r { animation-delay: .7s; }
 .mr-logo * { transition: stroke .6s; }
@@ -158,3 +158,25 @@ body { background: #07080b; margin: 0; }
 @media (min-width: 900px) { .mr-shot { width: 210px; } }
 .mr-shots-note { margin: 4px 0 0; font-size: 12px; opacity: .6; text-align: center; }
 @keyframes mr-bob2 { from { transform: translateY(-5px); } to { transform: translateY(7px); } }
+
+.mr-progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 50; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: background .6s; } [dir=rtl] .mr-progress { transform-origin: right; }
+.mr-all { padding: 70px 0 30px; } .mr-sec-head h2 small { font-size: .45em; opacity: .65; margin-inline-start: 8px; font-weight: 500; }
+.mr-cgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 24px 22px 20px; }
+@media (min-width: 700px) { .mr-cgrid { grid-template-columns: repeat(3, 1fr); gap: 16px; } } @media (min-width: 1100px) { .mr-cgrid { grid-template-columns: repeat(4, 1fr); padding-inline: 48px; } }
+.mr-card { position: relative; display: block; aspect-ratio: 4/3; overflow: hidden; border-radius: 16px; background: #14161c; border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); transition: transform .35s, border-color .35s, box-shadow .35s; }
+.mr-card.is-hid { display: none; }
+.mr-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s; }
+.mr-card::after, .mr-rv-grid figure::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(240px circle at var(--gx, 50%) var(--gy, 50%), color-mix(in srgb, var(--accent) 28%, transparent), transparent 70%); }
+.mr-card:hover::after, .mr-rv-grid figure:hover::after { opacity: 1; }
+.mr-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 22px 44px -22px var(--accent); } .mr-card:hover img { transform: scale(1.07); }
+.mr-card em { position: absolute; inset-inline: 0; bottom: 0; padding: 22px 12px 10px; font-style: normal; font-size: 13px; font-weight: 600; background: linear-gradient(transparent, #000d); }
+.mr-more-wrap { display: flex; justify-content: center; padding: 8px 0 30px; }
+.mr-rv-grid { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 26px 22px 30px; }
+@media (min-width: 760px) { .mr-rv-grid { grid-template-columns: repeat(2, 1fr); } } @media (min-width: 1100px) { .mr-rv-grid { grid-template-columns: repeat(3, 1fr); padding-inline: 48px; } }
+.mr-rv-grid figure { position: relative; overflow: hidden; margin: 0; padding: 26px 24px 22px; border-radius: 22px; background: color-mix(in srgb, var(--ink) 7%, transparent); border: 1px solid color-mix(in srgb, var(--ink) 15%, transparent); transition: transform .35s, border-color .35s; }
+.mr-rv-grid figure:hover { transform: translateY(-5px); border-color: var(--accent); }
+.mr-rv-grid .mr-q { position: absolute; top: -6px; inset-inline-start: 14px; font-size: 72px; line-height: 1; color: var(--accent); opacity: .35; font-family: Georgia, serif; }
+.mr-rv-grid blockquote { margin: 14px 0 16px; font-size: 16px; line-height: 1.8; position: relative; } .mr-rv-grid figcaption { color: var(--accent); font-weight: 700; font-size: 14px; position: relative; }
+.mr-about { display: grid; gap: 24px; align-items: center; padding: 70px 22px; max-width: 900px; margin: 0 auto; } .mr-about-logo { width: 140px; height: 140px; border-radius: 28px; object-fit: cover; box-shadow: 0 30px 60px -30px var(--accent); }
+.mr-about p { line-height: 1.9; font-size: 17px; opacity: .9; margin: 0 0 12px; } @media (min-width: 760px) { .mr-about { grid-template-columns: 160px 1fr; padding-inline: 48px; } }
+@media (prefers-reduced-motion: reduce) { .mr-progress { transition: none; } }
