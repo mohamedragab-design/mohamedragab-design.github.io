@@ -45,7 +45,7 @@
     var marquee = names.concat(names, names).map(function (n) { return '<span>' + esc(n) + '<i></i></span>'; }).join('');
     var floats = d.projects.filter(function (p) { return p.images && p.images[0]; }).slice(0, 5).map(function (p, i) { return '<img class="mr-fl mr-fl-' + i + '" src="' + esc(safeUrl(p.images[0])) + '" alt="">'; }).join('');
     var vcount = d.videos.filter(function (v) { return !v.hidden; }).length;
-    var stats = [[d.projects.length + (d.archive || []).length, ''], [s.yearsClaim || 0, '+'], [vcount, ''], [d.reviews.length, '']].map(function (a, i) { return '<div><b data-count="' + a[0] + '" data-suffix="' + a[1] + '">0</b><span>' + t.stats[i] + '</span></div>'; }).join('');
+    var stats = [[d.projects.length + (d.archive || []).length, '', 0], [s.yearsClaim || 0, '+', 1], [vcount, '', 2], [d.reviews.length, '', 3]].filter(function (a) { return a[2] !== 1 || a[0]; }).map(function (a) { return '<div><b data-count="' + a[0] + '" data-suffix="' + a[1] + '">0</b><span>' + t.stats[a[2]] + '</span></div>'; }).join('');
     var vids = d.videos.filter(function (v) { return !v.hidden; }).map(function (v, i) {
       return '<button type="button" class="mr-vid" data-vid="' + esc(v.id) + '" style="animation-delay:' + ((i % 8) * 0.15) + 's">' + (v.thumb ? '<img src="' + esc(safeUrl(v.thumb)) + '" alt="' + esc(v.title) + '" loading="lazy">' : '<span class="mr-vid-blank"></span>') + '<span class="mr-play" aria-hidden="true"></span><em>' + esc(v.title) + '</em></button>';
     }).join('');
