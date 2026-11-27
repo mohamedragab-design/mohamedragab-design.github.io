@@ -62,8 +62,141 @@
  },
  "projects": [
   {
+   "id": "ytg",
+   "en": "YTG",
+   "ar": "يوسف التلاوي جروب",
+   "sector": {
+    "en": "Marble & agricultural export, ad films",
+    "ar": "تصدير رخام ومحاصيل زراعية، أفلام إعلانية"
+   },
+   "desc": {
+    "en": "Two export ad films for Youssef Alteley Group: one for marble and stone, one for crops. Logo-led, cinematic and built for international buyers.",
+    "ar": "فيلمين إعلانيين لمجموعة يوسف التلاوي للتصدير: واحد للرخام والأحجار وواحد للمحاصيل. اللوجو حاضر في الفيديو بشكل سينمائي موجّه للمشترين في الخارج."
+   },
+   "tags": [
+    "Video Ad",
+    "Branding"
+   ],
+   "accent": "#c9b79c",
+   "bg": "#12100d",
+   "ink": "#f5efe4",
+   "behance": "https://www.behance.net/gallery/259142599/YTG-Youssef-Alteley-Group-Export-Ad-Films",
+   "images": [
+    "assets/images/ytg-1.webp"
+   ],
+   "videos": [
+    {
+     "src": "assets/videos/ytg-stones.mp4",
+     "poster": "assets/videos/ytg-stones.jpg",
+     "title": "Marble & Stone"
+    },
+    {
+     "src": "assets/videos/ytg-crops.mp4",
+     "poster": "assets/videos/ytg-crops.jpg",
+     "title": "Crops"
+    }
+   ],
+   "num": "01"
+  },
+  {
+   "id": "shamis",
+   "en": "SHAMIS",
+   "ar": "شميس جروب",
+   "sector": {
+    "en": "Mobile phones & accessories, video ad",
+    "ar": "موبايلات وإكسسوارات، فيلم إعلاني"
+   },
+   "desc": {
+    "en": "A video ad for SHAMIS Group, built around the shop, the products and a clear call to visit.",
+    "ar": "فيلم إعلاني لشميس جروب عن المحل والمنتجات ودعوة واضحة للزيارة."
+   },
+   "tags": [
+    "Video Ad",
+    "Branding"
+   ],
+   "accent": "#4da3ff",
+   "bg": "#0a111d",
+   "ink": "#eef4ff",
+   "behance": "https://www.behance.net/gallery/259141989/SHAMIS-Mobile-Phones-Accessories-Video-Ad",
+   "images": [
+    "assets/images/shamis-1.webp"
+   ],
+   "videos": [
+    {
+     "src": "assets/videos/shamis-film.mp4",
+     "poster": "assets/videos/shamis-film.jpg",
+     "title": "SHAMIS"
+    }
+   ],
+   "num": "02"
+  },
+  {
+   "id": "mrshady",
+   "en": "MR SHADY",
+   "ar": "مستر شادي",
+   "sector": {
+    "en": "Automotive glass, Cairo, video ad",
+    "ar": "زجاج سيارات في القاهرة، فيلم إعلاني"
+   },
+   "desc": {
+    "en": "A video ad for MR SHADY Automotive Glass: workshop, logo and identity in one short film.",
+    "ar": "فيلم إعلاني لمستر شادي لزجاج السيارات: الورشة واللوجو والهوية في فيلم قصير."
+   },
+   "tags": [
+    "Video Ad",
+    "Branding"
+   ],
+   "accent": "#5ec2ff",
+   "bg": "#0a0f14",
+   "ink": "#eaf6ff",
+   "behance": "https://www.behance.net/gallery/259142231/MR-SHADY-Automotive-Glass-Video-Ad",
+   "images": [
+    "assets/images/mrshady-1.webp"
+   ],
+   "videos": [
+    {
+     "src": "assets/videos/mrshady-film.mp4",
+     "poster": "assets/videos/mrshady-film.jpg",
+     "title": "MR SHADY"
+    }
+   ],
+   "num": "03"
+  },
+  {
+   "id": "ekhwa",
+   "en": "EL-EKHWA",
+   "ar": "مؤسسة الأخوة",
+   "sector": {
+    "en": "Electrical & power infrastructure, video ad",
+    "ar": "أعمال كهربائية وبنية تحتية للطاقة، فيلم إعلاني"
+   },
+   "desc": {
+    "en": "A 60-second film for EL-EKHWA Electrical Services following the path of power from the grid to the home.",
+    "ar": "فيلم دقيقة لمؤسسة الأخوة للأعمال الكهربائية عن رحلة الطاقة من المنظومة لحد البيت."
+   },
+   "tags": [
+    "Video Ad",
+    "Branding"
+   ],
+   "accent": "#ffc83d",
+   "bg": "#0d0c08",
+   "ink": "#fff6dc",
+   "behance": "https://www.behance.net/gallery/259142331/EL-EKHWA-Electrical-Power-Infrastructure-Video-Ad",
+   "images": [
+    "assets/images/ekhwa-1.webp"
+   ],
+   "videos": [
+    {
+     "src": "assets/videos/ekhwa-film.mp4",
+     "poster": "assets/videos/ekhwa-film.jpg",
+     "title": "EL-EKHWA"
+    }
+   ],
+   "num": "04"
+  },
+  {
    "id": "siraj",
-   "num": "01",
+   "num": "05",
    "en": "Al-Siraj",
    "ar": "السراج",
    "sector": {
@@ -93,7 +226,7 @@
   },
   {
    "id": "legend",
-   "num": "02",
+   "num": "06",
    "en": "Al-Ostora",
    "ar": "الأسطورة",
    "sector": {
@@ -123,7 +256,7 @@
   },
   {
    "id": "nine9",
-   "num": "03",
+   "num": "07",
    "en": "NINE",
    "ar": "ناين",
    "sector": {
@@ -153,7 +286,7 @@
   },
   {
    "id": "hadidy",
-   "num": "04",
+   "num": "08",
    "en": "Al Hadidy",
    "ar": "عقارات الحديدي",
    "sector": {
@@ -183,7 +316,7 @@
   },
   {
    "id": "alittihad",
-   "num": "05",
+   "num": "09",
    "en": "Al Ittihad",
    "ar": "الاتحاد",
    "sector": {
@@ -213,7 +346,7 @@
   },
   {
    "id": "israa",
-   "num": "06",
+   "num": "10",
    "en": "Al-Israa",
    "ar": "مصنع الإسراء",
    "sector": {
@@ -243,7 +376,7 @@
   },
   {
    "id": "elgehiny",
-   "num": "07",
+   "num": "11",
    "en": "El-Gehiny Paints",
    "ar": "حازم الجهيني للدهانات",
    "sector": {
@@ -273,7 +406,7 @@
   },
   {
    "id": "ofoq",
-   "num": "08",
+   "num": "12",
    "en": "OFOQ",
    "ar": "أفق",
    "sector": {
@@ -303,7 +436,7 @@
   },
   {
    "id": "rasmy",
-   "num": "09",
+   "num": "13",
    "en": "Rasmy Group",
    "ar": "رسمي جروب",
    "sector": {
@@ -333,7 +466,7 @@
   },
   {
    "id": "abosanad",
-   "num": "10",
+   "num": "14",
    "en": "Abo Sanad",
    "ar": "أبو سند",
    "sector": {
@@ -363,7 +496,7 @@
   },
   {
    "id": "mazaya",
-   "num": "11",
+   "num": "15",
    "en": "Mazaya",
    "ar": "مزايا",
    "sector": {
@@ -393,7 +526,7 @@
   },
   {
    "id": "tayba",
-   "num": "12",
+   "num": "16",
    "en": "Tayba Group",
    "ar": "مجموعة طيبة",
    "sector": {
@@ -925,26 +1058,6 @@
   }
  ],
  "archive": [
-  {
-   "t": "YTG Youssef Alteley Group | Export Ad Films",
-   "c": "https://mir-s3-cdn-cf.behance.net/projects/404/aab158259142599.Y3JvcCwxMDI0LDgwMCwwLDExMQ.jpg",
-   "u": "https://www.behance.net/gallery/259142599/YTG-Youssef-Alteley-Group-Export-Ad-Films"
-  },
-  {
-   "t": "EL-EKHWA | Electrical & Power Infrastructure Video Ad",
-   "c": "https://mir-s3-cdn-cf.behance.net/projects/404/434216259142331.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg",
-   "u": "https://www.behance.net/gallery/259142331/EL-EKHWA-Electrical-Power-Infrastructure-Video-Ad"
-  },
-  {
-   "t": "MR SHADY Automotive Glass | Video Ad",
-   "c": "https://mir-s3-cdn-cf.behance.net/projects/404/263790259142231.Y3JvcCw4NTYsNjcwLDE3MSww.jpg",
-   "u": "https://www.behance.net/gallery/259142231/MR-SHADY-Automotive-Glass-Video-Ad"
-  },
-  {
-   "t": "SHAMIS | Mobile Phones & Accessories Video Ad",
-   "c": "https://mir-s3-cdn-cf.behance.net/projects/404/f8f3da259141989.Y3JvcCwxMDI0LDgwMCwwLDExMQ.jpg",
-   "u": "https://www.behance.net/gallery/259141989/SHAMIS-Mobile-Phones-Accessories-Video-Ad"
-  },
   {
    "t": "Abo Ahmed Auto Parts",
    "c": "https://mir-s3-cdn-cf.behance.net/projects/404/3b6734253131137.6a60dc1a0cbe2.png",

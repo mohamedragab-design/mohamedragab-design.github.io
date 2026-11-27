@@ -180,3 +180,8 @@ body { background: #07080b; margin: 0; }
 .mr-about { display: grid; gap: 24px; align-items: center; padding: 70px 22px; max-width: 900px; margin: 0 auto; } .mr-about-logo { width: 140px; height: 140px; border-radius: 28px; object-fit: cover; box-shadow: 0 30px 60px -30px var(--accent); }
 .mr-about p { line-height: 1.9; font-size: 17px; opacity: .9; margin: 0 0 12px; } @media (min-width: 760px) { .mr-about { grid-template-columns: 160px 1fr; padding-inline: 48px; } }
 @media (prefers-reduced-motion: reduce) { .mr-progress { transition: none; } }
+
+.mr-films { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; max-width: 1100px; margin: 26px auto 0; padding: 0 16px; grid-column: 1 / -1; }
+.mr-film { margin: 0; flex: 1 1 420px; max-width: 640px; }
+.mr-film video { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 18px; border: 1px solid color-mix(in srgb, var(--c-accent) 50%, transparent); display: block; }
+.mr-film figcaption { margin-top: 8px; font-size: 14px; opacity: .75; text-align: center; }

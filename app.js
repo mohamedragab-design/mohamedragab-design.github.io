@@ -3,12 +3,12 @@
 (function () {
   'use strict';
   var T = {
-    en: { view: 'See the work', hire: 'Hire me', work: 'Selected work', workSub: 'Twelve featured brands, each in its own colors.', allWork: 'All projects on Behance', allSub: 'Every project from my Behance profile, newest first. Tap one to open it.', more: 'Show more', about: 'About me', open: 'Open on Behance',
+    en: { view: 'See the work', hire: 'Hire me', work: 'Selected work', workSub: 'Sixteen featured brands, each in its own colors.', allWork: 'All projects on Behance', allSub: 'Every project from my Behance profile, newest first. Tap one to open it.', more: 'Show more', about: 'About me', open: 'Open on Behance',
       reel: 'Video samples', reelSub: 'Brand reveals and short films. Tap a clip to play it.', reelBtn: 'Open the full folder',
       reviews: 'What clients wrote', reviewsSub: 'Real comments from my client reviews post on Facebook, word for word.', reviewsBtn: 'Read them on Facebook',
       contactBtn: 'Message me on Behance', contact: 'Let us build yours.', contactText: 'Tell me about your brand. Logos, identity, social designs, ad films and edits.',
       stats: ['Projects completed', 'Years in marketing design', 'Video samples', 'Client reviews'], lang: 'عربي', menu: ['Work', 'ZAIN ARENA', 'Videos', 'Reviews', 'Contact'], by: 'Scroll', zainBtn: 'Visit the app website', close: 'Close' },
-    ar: { view: 'شوف الشغل', hire: 'اطلبني', work: 'أعمال مختارة', workSub: 'اتناشر علامة مميزة، كل واحدة بألوانها.', allWork: 'كل مشاريعي على بيهانس', allSub: 'كل المشاريع اللي على بروفايلي في بيهانس، من الأحدث. اضغط على أي مشروع لفتحه.', more: 'اعرض أكتر', about: 'نبذة عني', open: 'افتح على بيهانس',
+    ar: { view: 'شوف الشغل', hire: 'اطلبني', work: 'أعمال مختارة', workSub: 'ستاشر علامة مميزة، كل واحدة بألوانها.', allWork: 'كل مشاريعي على بيهانس', allSub: 'كل المشاريع اللي على بروفايلي في بيهانس، من الأحدث. اضغط على أي مشروع لفتحه.', more: 'اعرض أكتر', about: 'نبذة عني', open: 'افتح على بيهانس',
       reel: 'نماذج فيديو', reelSub: 'كشف علامات وأفلام قصيرة. اضغط على أي فيديو لتشغيله.', reelBtn: 'افتح الفولدر كامل',
       reviews: 'كلام العملاء', reviewsSub: 'تعليقات حقيقية من بوست ريفيوهات العملاء على فيسبوك، بنصها.', reviewsBtn: 'اقراها على فيسبوك',
       contactBtn: 'كلمني على بيهانس', contact: 'خلينا نبني شغلك.', contactText: 'احكيلي عن علامتك. شعارات، هوية، تصميمات سوشيال، إعلانات ومونتاج.',
@@ -36,6 +36,7 @@
       '<div class="mr-chapter-head" data-rv><span class="mr-chip">' + esc((p.tags || []).join(' · ')) + '</span><h3>' + esc(p.en) + '</h3><p class="mr-ar" dir="rtl">' + esc(p.ar) + '</p><p class="mr-sector">' + esc(L(p.sector)) + '</p><p class="mr-desc">' + esc(L(p.desc)) + '</p>' +
       (p.behance ? '<a class="mr-link" href="' + esc(safeUrl(p.behance)) + '" target="_blank" rel="noopener">' + t.open + ' <span aria-hidden="true">&#8599;</span></a>' : '') + '</div>' +
       '<div class="mr-stage" data-rv><div class="mr-glow"></div>' + (imgs[0] ? '<button type="button" class="mr-hero-img" data-lb="' + esc(imgs[0]) + '" aria-label="' + esc(p.en) + '"><img src="' + esc(imgs[0]) + '" alt="' + esc(p.en) + ' logo" loading="lazy"></button>' : '') + '</div>' +
+      (p.videos && p.videos.length ? '<div class="mr-films" data-rv>' + p.videos.map(function (v) { return '<figure class="mr-film"><video controls playsinline preload="none" poster="' + esc(safeUrl(v.poster || '')) + '" src="' + esc(safeUrl(v.src)) + '"></video>' + (p.videos.length > 1 ? '<figcaption>' + esc(v.title || '') + '</figcaption>' : '') + '</figure>'; }).join('') + '</div>' : '') +
       (strip ? '<div class="mr-strip" data-rv>' + strip + '</div>' : '') + '</section>';
   }
 
