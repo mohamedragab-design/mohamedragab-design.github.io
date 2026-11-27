@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Keep Supabase project awake
+        run: |
+          curl -s -m 20 -X POST https://ggfszanqfmipjusvmyta.supabase.co/rest/v1/rpc/hit -H 'apikey: sb_publishable_e9vphZwluitGN0wxdQkEGQ_d9tN4Ikg' -H 'Content-Type: application/json' -d '{"p_site":"zain","p_count":false}' || true
       - name: Pull projects from Behance RSS
         run: python3 scripts/sync_behance.py
       - name: Commit and push if changed
