@@ -7,12 +7,12 @@
       reel: 'Video samples', reelSub: 'Brand reveals and short films. Tap a clip to play it.', reelBtn: 'Open the full folder',
       reviews: 'What clients wrote', reviewsSub: 'Real comments from my client reviews post on Facebook, word for word.', reviewsBtn: 'Read them on Facebook',
       contactBtn: 'Message me on Behance', contact: 'Let us build yours.', contactText: 'Tell me about your brand. Logos, identity, social designs, ad films and edits.',
-      stats: ['Projects completed', 'Years in marketing design', 'Video samples', 'Client reviews'], lang: 'عربي', menu: ['Work', 'ZAIN ARENA', 'Videos', 'Reviews', 'Contact'], by: 'Scroll', zainBtn: 'Follow on Instagram', close: 'Close' },
+      stats: ['Projects completed', 'Years in marketing design', 'Video samples', 'Client reviews'], lang: 'عربي', menu: ['Work', 'ZAIN ARENA', 'Videos', 'Reviews', 'Contact'], by: 'Scroll', zainBtn: 'Visit the app website', close: 'Close' },
     ar: { view: 'شوف الشغل', hire: 'اطلبني', work: 'أعمال مختارة', workSub: 'اتناشر علامة مميزة، كل واحدة بألوانها.', allWork: 'كل مشاريعي على بيهانس', allSub: 'كل المشاريع اللي على بروفايلي في بيهانس، من الأحدث. اضغط على أي مشروع لفتحه.', more: 'اعرض أكتر', about: 'نبذة عني', open: 'افتح على بيهانس',
       reel: 'نماذج فيديو', reelSub: 'كشف علامات وأفلام قصيرة. اضغط على أي فيديو لتشغيله.', reelBtn: 'افتح الفولدر كامل',
       reviews: 'كلام العملاء', reviewsSub: 'تعليقات حقيقية من بوست ريفيوهات العملاء على فيسبوك، بنصها.', reviewsBtn: 'اقراها على فيسبوك',
       contactBtn: 'كلمني على بيهانس', contact: 'خلينا نبني شغلك.', contactText: 'احكيلي عن علامتك. شعارات، هوية، تصميمات سوشيال، إعلانات ومونتاج.',
-      stats: ['مشروع منفذ', 'سنين في تصميم التسويق', 'نموذج فيديو', 'تقييم عميل'], lang: 'EN', menu: ['الشغل', 'ZAIN ARENA', 'الفيديو', 'الآراء', 'تواصل'], by: 'انزل', zainBtn: 'تابعنا على انستجرام', close: 'إغلاق' }
+      stats: ['مشروع منفذ', 'سنين في تصميم التسويق', 'نموذج فيديو', 'تقييم عميل'], lang: 'EN', menu: ['الشغل', 'ZAIN ARENA', 'الفيديو', 'الآراء', 'تواصل'], by: 'انزل', zainBtn: 'افتح موقع التطبيق', close: 'إغلاق' }
   };
   var lang = (localStorage.getItem('mr-lang') || 'en');
   var data, root = document.getElementById('app');
@@ -72,7 +72,7 @@
       '<section class="mr-stats" data-rv>' + stats + '</section>' +
       '<section id="work" class="mr-work"><div class="mr-sec-head" data-rv><h2>' + t.work + '</h2><p>' + t.workSub + '</p></div>' + d.projects.map(chapter).join('') + '</section>' + archHtml +
       aboutHtml + '<section id="zain" class="mr-zain"><div class="mr-zain-bg"></div><div class="mr-zain-copy" data-rv><span class="mr-chip">' + esc(L(d.zain.tag)) + '</span><h2>' + esc(d.zain.title) + '</h2><p>' + esc(L(d.zain.text)) + '</p>' +
-      '<a class="mr-btn" href="' + esc(safeUrl(links.instagram)) + '" target="_blank" rel="noopener">' + t.zainBtn + ' &#8599;</a></div><div class="mr-zain-art" data-rv>' + zainImg + '</div>' + shotsHtml + '</section>' +
+      '<a class="mr-btn" href="' + esc(safeUrl(links.zainWebsite)) + '" target="_blank" rel="noopener">' + t.zainBtn + ' &#8599;</a></div><div class="mr-zain-art" data-rv>' + zainImg + '</div>' + shotsHtml + '</section>' +
       '<section id="reel" class="mr-reel"><div class="mr-sec-head" data-rv><h2>' + t.reel + '</h2><p>' + t.reelSub + '</p></div><div class="mr-vgrid" data-rv>' + vids + '</div><a class="mr-btn mr-btn-ghost" href="' + esc(safeUrl(links.drive)) + '" target="_blank" rel="noopener">' + t.reelBtn + ' &#8599;</a></section>' +
       '<section id="contact" class="mr-contact" data-rv><h2>' + t.contact + '</h2><p>' + t.contactText + '</p><div class="mr-cta"><a class="mr-btn" href="' + esc(safeUrl(links.behance)) + '" target="_blank" rel="noopener">' + t.contactBtn + ' &#8599;</a><a class="mr-btn mr-btn-ghost" href="' + esc(safeUrl(links.reviews)) + '" target="_blank" rel="noopener">' + t.reviewsBtn + ' &#8599;</a><a class="mr-btn mr-btn-ghost" href="' + esc(safeUrl(links.instagram)) + '" target="_blank" rel="noopener">ZAIN ARENA &#8599;</a></div></section>' +
       '<footer class="mr-foot">&copy; ' + new Date().getFullYear() + ' ' + esc(s.name) + ' &middot; Graphic Design</footer>' +
